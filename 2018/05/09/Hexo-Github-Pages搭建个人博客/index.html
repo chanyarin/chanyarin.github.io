@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="折腾了两天，对如何使用Hexo+Github Pages搭建博客有了一些理解，现在记录下来，方便自己以后翻阅使用。 工具简介1、HexoHexo是一个快速、简洁且高效的博客框架，在这里可以了解更多。2、Git、GitHub、GitHub Pages三者的关系Git：是Linux的创始人Linus在2005年用C编写的一个分布式版本控制系统，详细请看Git简史。GitHub：是一个共享虚拟主机服务，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+Github Pages搭建个人博客">
+<meta property="og:url" content="http://yoursite.com/2018/05/09/Hexo-Github-Pages搭建个人博客/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="折腾了两天，对如何使用Hexo+Github Pages搭建博客有了一些理解，现在记录下来，方便自己以后翻阅使用。 工具简介1、HexoHexo是一个快速、简洁且高效的博客框架，在这里可以了解更多。2、Git、GitHub、GitHub Pages三者的关系Git：是Linux的创始人Linus在2005年用C编写的一个分布式版本控制系统，详细请看Git简史。GitHub：是一个共享虚拟主机服务，">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-09T07:28:49.962Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Hexo+Github Pages搭建个人博客">
+<meta name="twitter:description" content="折腾了两天，对如何使用Hexo+Github Pages搭建博客有了一些理解，现在记录下来，方便自己以后翻阅使用。 工具简介1、HexoHexo是一个快速、简洁且高效的博客框架，在这里可以了解更多。2、Git、GitHub、GitHub Pages三者的关系Git：是Linux的创始人Linus在2005年用C编写的一个分布式版本控制系统，详细请看Git简史。GitHub：是一个共享虚拟主机服务，">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/09/Hexo-Github-Pages搭建个人博客/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>Hexo+Github Pages搭建个人博客 | Hexo</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +217,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/09/Hexo-Github-Pages搭建个人博客/" itemprop="url">Hexo+Github Pages搭建个人博客</a></h1>
+          <h1 class="post-title" itemprop="name headline">Hexo+Github Pages搭建个人博客</h1>
         
 
         <div class="post-meta">
@@ -298,9 +299,7 @@
       
 
       
-        
-          
-            <p>折腾了两天，对如何使用Hexo+Github Pages搭建博客有了一些理解，现在记录下来，方便自己以后翻阅使用。</p>
+        <p>折腾了两天，对如何使用Hexo+Github Pages搭建博客有了一些理解，现在记录下来，方便自己以后翻阅使用。</p>
 <h2 id="工具简介"><a href="#工具简介" class="headerlink" title="工具简介"></a>工具简介</h2><p>1、<strong>Hexo</strong><br>Hexo是一个快速、简洁且高效的博客框架，在<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">这里</a>可以了解更多。<br>2、<strong>Git、GitHub、GitHub Pages三者的关系</strong><br>Git：是Linux的创始人Linus在2005年用C编写的一个分布式版本控制系统，详细请看<a href="https://git-scm.com/book/zh/v1/起步-Git-简史" target="_blank" rel="noopener">Git简史</a>。<br>GitHub：是一个共享虚拟主机服务，用于存放使用Git版本控制的软件代码和内容项目。<br>GitHub Pages：GitHub提供给开发者来存放静态网页，展示作者的想法或项目说明。<br>3、<strong>GitHub Pages类型</strong><br>· User/Organization Pages（个人或公司站点）<br>①这种类型的Pages通过新建一个仓库建立，以自己的用户名命名，且每个用户名只能建立 一个；<br>②仓库主干（master）上内容被用来构建和发布页面<br>③<strong>多用于建立个人博客（这正是本篇的目的所在）</strong><br>· Project Pages 项目站点<br>①这种类型的仓库通过修改项目的Setting建立，一个项目只能建立一个；<br>②仓库新建了一个gh-pages分支用于构建和发布页面；<br>③多用于展示项目效果、给出项目说明、分享作者思想等</p>
 <h2 id="搭建博客原理"><a href="#搭建博客原理" class="headerlink" title="搭建博客原理"></a>搭建博客原理</h2><p>所谓搭建个人博客，通俗来讲就是使用Hexo这一个博客框架来书写博客内容生成HTML文件部署到可以展示HTML文件的服务器上（如GitHub的Pages服务，Coding的Pages服务等）。</p>
 <h2 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h2><p>1、<strong>注册GitHub账号</strong><br>关于如何创建GitHub账号就不必多说了，去<a href="https://github.com" target="_blank" rel="noopener">官网</a>一目了然。<br>2、<strong>创建仓库</strong><br>①创建 用户名.github.io 仓库（<strong>必须使用用户名</strong>）。<br>②使用用户名创建仓库，默认开始GitHub Pages服务。<br>③博客可以通过仓库名直接访问，如果不使用用户名，则不能访问。<br>3、<strong>安装Git</strong><br>Mac一般自带Git，如果没有可至<a href="https://git-scm.com/download/" target="_blank" rel="noopener">官网下载</a>一路安装即可。<br>4、<strong>安装Node.js</strong><br><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">下载Node.js</a><br><a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">安装Node.js</a><br>如果已安装Node.js，可使用下面操作进行版本更新<br>①查看本机版本</p>
@@ -350,8 +349,6 @@
 <p>hexo g<br>hexo s</p>
 </blockquote>
 
-          
-        
       
     </div>
     
@@ -368,12 +365,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -383,10 +380,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -394,6 +392,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -414,8 +416,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -457,6 +468,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#工具简介"><span class="nav-number">1.</span> <span class="nav-text">工具简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建博客原理"><span class="nav-number">2.</span> <span class="nav-text">搭建博客原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建过程"><span class="nav-number">3.</span> <span class="nav-text">搭建过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加-更换主题"><span class="nav-number">4.</span> <span class="nav-text">添加/更换主题</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -590,6 +617,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
