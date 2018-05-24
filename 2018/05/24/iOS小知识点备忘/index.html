@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="参考两篇博客，有时间再来整理一下iOS模块化：基础框架的创建如何发布自己的开源框架到CocoaPods">
+<meta name="description" content="1.NSLocalizedString 和 NSLocalizedStringFromTable 区别①如果在命名.strings文件为Localizable.strings时，那么你就可以用以下方式调用：NSLocalizedString(@”name”, nil)NSLocalizedStringFromTable(@”str0”, @”Localizable”, nil))两者功能一致。②如">
 <meta property="og:type" content="article">
-<meta property="og:title" content="制作自己的cocoapods库">
-<meta property="og:url" content="http://yoursite.com/2018/05/16/制作自己的cocoapods库/index.html">
+<meta property="og:title" content="iOS小知识点备忘">
+<meta property="og:url" content="http://yoursite.com/2018/05/24/iOS小知识点备忘/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="参考两篇博客，有时间再来整理一下iOS模块化：基础框架的创建如何发布自己的开源框架到CocoaPods">
+<meta property="og:description" content="1.NSLocalizedString 和 NSLocalizedStringFromTable 区别①如果在命名.strings文件为Localizable.strings时，那么你就可以用以下方式调用：NSLocalizedString(@”name”, nil)NSLocalizedStringFromTable(@”str0”, @”Localizable”, nil))两者功能一致。②如">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-16T09:43:19.903Z">
+<meta property="og:updated_time" content="2018-05-24T03:33:03.432Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="制作自己的cocoapods库">
-<meta name="twitter:description" content="参考两篇博客，有时间再来整理一下iOS模块化：基础框架的创建如何发布自己的开源框架到CocoaPods">
+<meta name="twitter:title" content="iOS小知识点备忘">
+<meta name="twitter:description" content="1.NSLocalizedString 和 NSLocalizedStringFromTable 区别①如果在命名.strings文件为Localizable.strings时，那么你就可以用以下方式调用：NSLocalizedString(@”name”, nil)NSLocalizedStringFromTable(@”str0”, @”Localizable”, nil))两者功能一致。②如">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/16/制作自己的cocoapods库/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/24/iOS小知识点备忘/"/>
 
 
 
 
 
-  <title>制作自己的cocoapods库 | Hexo</title>
+  <title>iOS小知识点备忘 | Hexo</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/16/制作自己的cocoapods库/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/iOS小知识点备忘/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">制作自己的cocoapods库</h1>
+          <h1 class="post-title" itemprop="name headline">iOS小知识点备忘</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-16T17:39:15+08:00">
-                2018-05-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-24T10:25:29+08:00">
+                2018-05-24
               </time>
             
 
@@ -299,7 +299,14 @@
       
 
       
-        <p>参考两篇博客，有时间再来整理一下<br><a href="http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&amp;mid=2652560462&amp;idx=2&amp;sn=ae4127abae70b0d5367a4f43502be6aa&amp;chksm=bcd299408ba5105667d39f40d4c8d9ec7cf5d6b3d8390d86e45af0d5a9004db17bc481c3523a&amp;mpshare=1&amp;scene=23&amp;srcid=0515U0vme0InEmBwCucmCRzt#rd" target="_blank" rel="noopener">iOS模块化：基础框架的创建</a><br><a href="https://blog.csdn.net/blog_t/article/details/59570385" target="_blank" rel="noopener">如何发布自己的开源框架到CocoaPods</a></p>
+        <h2 id="1-NSLocalizedString-和-NSLocalizedStringFromTable-区别"><a href="#1-NSLocalizedString-和-NSLocalizedStringFromTable-区别" class="headerlink" title="1.NSLocalizedString 和 NSLocalizedStringFromTable 区别"></a>1.NSLocalizedString 和 NSLocalizedStringFromTable 区别</h2><p>①如果在命名.strings文件为Localizable.strings时，那么你就可以用以下方式调用：<br>NSLocalizedString(@”name”, nil)<br>NSLocalizedStringFromTable(@”str0”, @”Localizable”, nil))<br>两者功能一致。<br>②如果创建.strings文件是自定义的名字的话，如当前我起名为Internation.strings,那么调用的方式为：<br>NSLocalizedStringFromTable(@”name”,@”Internation”, nil)<br>当自定义名字后，使用NSLocalizedString的方式不起作用。</p>
+<h2 id="property常用修饰符"><a href="#property常用修饰符" class="headerlink" title="property常用修饰符"></a>property常用修饰符</h2><p>①<strong>多线程特性修饰符</strong><br><strong>atomic</strong>：原子的。表示线程安全，编译器自动生成互斥加锁代码，但不保证一定安全且浪费系统资源。<br><strong>nonatomic</strong>：非原子的。表示非线程安全，编译器会少生成一些互斥加锁代码，提高效率。</p>
+<blockquote>
+<p>建议：涉及多线程，使用atomic，保证安全。不涉及多线程，使用nonatomic,，效率高。</p>
+</blockquote>
+<p>②<strong>读写特性</strong><br><strong>readwrite</strong>：默认特性。编译器为属性生成getter和setter方法。<br><strong>readonly</strong>：编译器只生成getter方法。仅供外界读取，在内部修改为readwrite属性。</p>
+<p>③<strong>内存管理特性</strong><br><strong>MRC时期：</strong><br><strong>assign</strong>：赋值。第一用于基本数据类型和C数据类型；第二用于id类型，避免强引用循环，但对象销毁时，指针不会被置空，可能会引起空指针。<br><strong>retain</strong>：持有。先release原来的值，在retain新值，引用计数自动+1。</p>
+<p><strong>ARC时期：(iOS5以后开始支持ARC管理内存)</strong><br><strong>strong</strong>：默认特性。对象引用计数+1，是指针拷贝（浅拷贝），取代MRC时期的retain。<br><strong>weak</strong>：表示“非拥有关系”，引用计数不+1，对象销毁时，指针自动被置为nil，放置野指针。取代MRC时期的assign的第二功能。<br><strong>unsafe_unretained</strong>：取代assign的第一功能。<br><strong>copy</strong>：复制一个相同对象并创建strong指针，是内容拷贝（深拷贝）。</p>
 
       
     </div>
@@ -324,8 +331,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/14/JavaScript学习简要笔记/" rel="next" title="JavaScript学习简要笔记">
-                <i class="fa fa-chevron-left"></i> JavaScript学习简要笔记
+              <a href="/2018/05/16/制作自己的cocoapods库/" rel="next" title="制作自己的cocoapods库">
+                <i class="fa fa-chevron-left"></i> 制作自己的cocoapods库
               </a>
             
           </div>
@@ -333,10 +340,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/24/iOS小知识点备忘/" rel="prev" title="iOS小知识点备忘">
-                iOS小知识点备忘 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -388,8 +391,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -431,6 +443,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-NSLocalizedString-和-NSLocalizedStringFromTable-区别"><span class="nav-number">1.</span> <span class="nav-text">1.NSLocalizedString 和 NSLocalizedStringFromTable 区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#property常用修饰符"><span class="nav-number">2.</span> <span class="nav-text">property常用修饰符</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
