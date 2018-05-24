@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="1.NSLocalizedString 和 NSLocalizedStringFromTable 区别①如果在命名.strings文件为Localizable.strings时，那么你就可以用以下方式调用：NSLocalizedString(@”name”, nil)NSLocalizedStringFromTable(@”str0”, @”Localizable”, nil))两者功能一致。②如">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-24T03:33:03.432Z">
+<meta property="og:updated_time" content="2018-05-24T03:47:01.783Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS小知识点备忘">
 <meta name="twitter:description" content="1.NSLocalizedString 和 NSLocalizedStringFromTable 区别①如果在命名.strings文件为Localizable.strings时，那么你就可以用以下方式调用：NSLocalizedString(@”name”, nil)NSLocalizedStringFromTable(@”str0”, @”Localizable”, nil))两者功能一致。②如">
@@ -307,6 +307,7 @@
 <p>②<strong>读写特性</strong><br><strong>readwrite</strong>：默认特性。编译器为属性生成getter和setter方法。<br><strong>readonly</strong>：编译器只生成getter方法。仅供外界读取，在内部修改为readwrite属性。</p>
 <p>③<strong>内存管理特性</strong><br><strong>MRC时期：</strong><br><strong>assign</strong>：赋值。第一用于基本数据类型和C数据类型；第二用于id类型，避免强引用循环，但对象销毁时，指针不会被置空，可能会引起空指针。<br><strong>retain</strong>：持有。先release原来的值，在retain新值，引用计数自动+1。</p>
 <p><strong>ARC时期：(iOS5以后开始支持ARC管理内存)</strong><br><strong>strong</strong>：默认特性。对象引用计数+1，是指针拷贝（浅拷贝），取代MRC时期的retain。<br><strong>weak</strong>：表示“非拥有关系”，引用计数不+1，对象销毁时，指针自动被置为nil，放置野指针。取代MRC时期的assign的第二功能。<br><strong>unsafe_unretained</strong>：取代assign的第一功能。<br><strong>copy</strong>：复制一个相同对象并创建strong指针，是内容拷贝（深拷贝）。</p>
+<p>④<strong>消除警告特性</strong><br><strong>__unused</strong>：定义变量后，如果不使用就会出现警告，如果在变量前加__unused前缀，就可以免除警告。其原理是告诉编译器，如果变量未使用就不参与编译。</p>
 
       
     </div>
