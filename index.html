@@ -301,7 +301,7 @@
         
           
             <h2 id="1-NSLocalizedString-和-NSLocalizedStringFromTable-区别"><a href="#1-NSLocalizedString-和-NSLocalizedStringFromTable-区别" class="headerlink" title="1.NSLocalizedString 和 NSLocalizedStringFromTable 区别"></a>1.NSLocalizedString 和 NSLocalizedStringFromTable 区别</h2><p>①如果在命名.strings文件为Localizable.strings时，那么你就可以用以下方式调用：<br>NSLocalizedString(@”name”, nil)<br>NSLocalizedStringFromTable(@”str0”, @”Localizable”, nil))<br>两者功能一致。<br>②如果创建.strings文件是自定义的名字的话，如当前我起名为Internation.strings,那么调用的方式为：<br>NSLocalizedStringFromTable(@”name”,@”Internation”, nil)<br>当自定义名字后，使用NSLocalizedString的方式不起作用。</p>
-<h2 id="property常用修饰符"><a href="#property常用修饰符" class="headerlink" title="property常用修饰符"></a>property常用修饰符</h2><p>①<strong>多线程特性修饰符</strong><br><strong>atomic</strong>：原子的。表示线程安全，编译器自动生成互斥加锁代码，但不保证一定安全且浪费系统资源。<br><strong>nonatomic</strong>：非原子的。表示非线程安全，编译器会少生成一些互斥加锁代码，提高效率。</p>
+<h2 id="2-property常用修饰符"><a href="#2-property常用修饰符" class="headerlink" title="2.property常用修饰符"></a>2.property常用修饰符</h2><p>①<strong>多线程特性修饰符</strong><br><strong>atomic</strong>：原子的。表示线程安全，编译器自动生成互斥加锁代码，但不保证一定安全且浪费系统资源。<br><strong>nonatomic</strong>：非原子的。表示非线程安全，编译器会少生成一些互斥加锁代码，提高效率。</p>
 <blockquote>
 <p>建议：涉及多线程，使用atomic，保证安全。不涉及多线程，使用nonatomic,，效率高。</p>
 </blockquote>
